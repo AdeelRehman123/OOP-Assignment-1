@@ -1,0 +1,60 @@
+  Student          
+Private:
+ studentID: int          
+ name: string            
+ paymentStatus: bool     
+
+Public:
+ Student(id, name)       
+ registerStudent()       
+ makePayment()           
+ checkPayment(): bool    
+ getStudentID(): int     
+ getName(): string     
+
+ Route           
+Private:
+ routeID: int            
+ startLocation: string   
+ endLocation: string     
+ stops[10]: string       
+ stopCount: int   
+
+Public:
+ Route(id, start, end)   
+ addStop(stop: string)   
+ displayRoute()          
+ getRouteID(): int    
+
+ Bus           
+Private:
+ busID: int                   
+ route: Route                 
+ seatsAvailable: int          
+ studentsOnBoard[30]: Student 
+ studentCount: int  
+
+Public:
+ Bus(id, route)               
+ addStudent(student: Student) 
+ displayBusDetails()          
+ getBusID(): int              
+
+ TransportationSystem              
+Private:
+ students[100]: Student                 
+ buses[20]: Bus                         
+ routes[20]: Route                      
+ studentCount: int                      
+ busCount: int                          
+ routeCount: int                        
+
+Public
+ TransportationSystem()                 
+ registerStudent()                      
+ makePayment()                          
+ addRoute()                             
+ addBus()                               
+ assignStudentToBus()                   
+ displayAllBuses()                      
+
